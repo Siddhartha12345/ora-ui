@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SideNavbarComponent } from "./side-navbar/side-navbar.component";
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -11,8 +11,8 @@ import { SideNavbarComponent } from "./side-navbar/side-navbar.component";
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    SideNavbarComponent
+    LandingPageComponent,
+    AppRoutingModule
 ],
   providers: [],
   bootstrap: [AppComponent]
