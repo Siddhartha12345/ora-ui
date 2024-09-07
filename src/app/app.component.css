@@ -1,0 +1,30 @@
+#nav-heading {
+    font-style: italic;
+    font-size: larger;
+}
+
+.main-container {
+    position: relative;
+    height: 100vh;
+}
+
+.left-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 18%; /* Adjust width as needed */
+    height: 100%; /* Full height of viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 82%; /* Adjust width as needed */
+    height: 100%; /* Full height of viewport */
+    overflow-y: auto; /* Enable vertical scrolling in the right div */
+    box-sizing: border-box; /* Include padding and border in width */
+}
