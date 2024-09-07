@@ -1,8 +1,8 @@
 <div class="container-fluid">
-    <div class="row flex-nowrap">
+    <div class="row flex-nowrap main-container">
         <!--Side Navbar start-->
-        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
-            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100" id="sidenav">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark left-container">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
                 <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRxPs05ml964HOf-UyNBtvoJcXEeIrrCJkadCYULabyy_I99clXyGI6xUR10tjsG3VpgY&usqp=CAU" 
                     alt="Logo" width="70" height="60" class="d-inline-block align-text-top" class="rounded-circle">
@@ -70,7 +70,7 @@
             </div>
         </div> <!--Side Navbar end-->
         <!--Load other components dynamically when it's route becomes active-->
-        <div class="col py-3">
+        <div class="col py-3 right-container">
             <router-outlet></router-outlet>
         </div>
     </div>
