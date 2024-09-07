@@ -4,14 +4,13 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { HomeComponent } from './home/home.component';
-import { ShampooComponent } from './product/shampoo/shampoo.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'about', component: AboutusComponent },
   { path: 'contact', component: ContactusComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'shampoo', component:ShampooComponent }
+  { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) }
 ];
 
 @NgModule({
