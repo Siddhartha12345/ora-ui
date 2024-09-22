@@ -144,4 +144,4 @@ export const shampooMockList = [
         isAddedToCart: false,
         productType: ProductType.SHAMPOO
     }
-]
+];

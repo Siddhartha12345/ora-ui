@@ -10,7 +10,7 @@ import { shampooMockList } from '../../../assets/mock/shampoo-mock';
   standalone: true,
   imports: [CommonModule, StarRatingComponent],
   templateUrl: './shampoo.component.html',
-  styleUrl: './shampoo.component.css'
+  styleUrls: ['./shampoo.component.css', '../products-styles.css']
 })
 export class ShampooComponent {
   
