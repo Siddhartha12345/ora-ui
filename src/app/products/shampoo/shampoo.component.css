@@ -15,3 +15,7 @@
     height: 100%; /* Stretch image to fill container height */
     object-fit: contain; /* Fit the entire image within the container */
 }
+
+i {
+    cursor: pointer;
+}
