@@ -11,7 +11,7 @@ export class ProductUtil {
     }
 
     static addToCart(productList: Product[], productId: string): void {
-        const product =productList.find(product => product.productId == productId);
+        const product = productList.find(product => product.productId == productId);
         if(product) {
             product.isAddedToCart = !product.isAddedToCart;
         } else {

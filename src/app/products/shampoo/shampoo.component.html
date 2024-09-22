@@ -20,7 +20,8 @@
                                     </div>
                                     <div class="col-2">
                                         <i [ngClass]="shampoo.isBookmarked ? 'bi bi-bookmark-plus-fill fs-2' : 'bi bi-bookmark-plus fs-2'" 
-                                        (click)="toggleBookmark(shampoo.productId)"></i>
+                                            (click)="toggleBookmark(shampoo.productId)">
+                                        </i>
                                     </div>
                                 </div>
                             </div>
@@ -30,7 +31,16 @@
                                 </div>
                                 <div class="col-8">
                                     <a (click)="addToCart(shampoo.productId)" 
-                                    [ngClass]="shampoo.isAddedToCart ? 'btn btn btn-outline-dark w-100 p-3 rounded-0' : 'btn btn-dark w-100 p-3 rounded-0 text-warning'">ADD TO CART</a>
+                                        [ngClass]="{
+                                            'btn': true,
+                                            'w-100': true,
+                                            'p-3': true,
+                                            'rounded-0': true,
+                                            'btn-outline-dark': shampoo.isAddedToCart,
+                                            'btn-dark text-warning': !shampoo.isAddedToCart
+                                        }">
+                                        {{ shampoo.isAddedToCart ? 'REMOVE' : 'ADD TO CART' }}
+                                    </a>
                                 </div>
                             </div>
                         </div>
