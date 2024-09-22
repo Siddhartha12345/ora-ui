@@ -1,1 +1,52 @@
-<p>hair-serums works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="container-fluid">
+                <div class="row gy-3 gy-md-4">
+                    <!--Card start-->
+                    <div class="col-12 col-md-6 col-lg-4 d-flex flex-column" *ngFor="let hairSerum of hairSerumList">   
+                        <div class="card border-0 rounded-0 shadow flex-fill card-container" style="width: 18rem;">
+                            <div class="card-img-container">
+                                <img src="{{ hairSerum.productImage }}" class="card-img-top rounded-0" alt="...">
+                            </div>
+                            <div class="card-body mt-3 mb-3">
+                                <div class="row">
+                                    <div class="col-10">
+                                        <h4 class="card-title">{{ hairSerum.productName }}</h4>
+                                        <p class="card-text">
+                                            <app-star-rating [rating]="hairSerum.productAvgRating"></app-star-rating>
+                                            ({{ hairSerum.productTotalRating }})
+                                        </p>
+                                    </div>
+                                    <div class="col-2">
+                                        <i [ngClass]="hairSerum.isBookmarked ? 'bi bi-bookmark-plus-fill fs-2' : 'bi bi-bookmark-plus fs-2'" 
+                                            (click)="toggleBookmark(hairSerum.productId)">
+                                        </i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row align-items-center text-center g-0">
+                                <div class="col-4">
+                                    <h5>{{ hairSerum.productPrice | currency: 'INR' }}</h5>
+                                </div>
+                                <div class="col-8">
+                                    <a (click)="addToCart(hairSerum.productId)" 
+                                        [ngClass]="{
+                                            'btn': true,
+                                            'w-100': true,
+                                            'p-3': true,
+                                            'rounded-0': true,
+                                            'btn-outline-dark': hairSerum.isAddedToCart,
+                                            'btn-dark text-warning': !hairSerum.isAddedToCart
+                                        }">
+                                        {{ hairSerum.isAddedToCart ? 'REMOVE' : 'ADD TO CART' }}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!--Card end-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
