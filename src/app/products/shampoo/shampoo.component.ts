@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Product } from '../../model/product';
 import { CommonModule } from '@angular/common';
+import { StarRatingComponent } from '../star-rating/star-rating.component';
 
 @Component({
   selector: 'app-shampoo',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, StarRatingComponent],
   templateUrl: './shampoo.component.html',
   styleUrl: './shampoo.component.css'
 })

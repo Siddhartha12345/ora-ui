@@ -5,7 +5,7 @@
                 <div class="row gy-3 gy-md-4">
                     <!--Card start-->
                     <div class="col-12 col-md-6 col-lg-4 d-flex flex-column" *ngFor="let shampoo of shampooList">   
-                        <div class="card border-0 rounded-0 shadow flex-fill" style="width: 18rem;">
+                        <div class="card border-0 rounded-0 shadow flex-fill card-container" style="width: 18rem;">
                             <div class="card-img-container">
                                 <img src="{{ shampoo.productImage }}" class="card-img-top rounded-0" alt="...">
                             </div>
@@ -14,11 +14,7 @@
                                     <div class="col-10">
                                         <h4 class="card-title">{{ shampoo.productName }}</h4>
                                         <p class="card-text">
-                                            <i class="bi bi-star-fill text-warning"></i>
-                                            <i class="bi bi-star-fill text-warning"></i>
-                                            <i class="bi bi-star-fill text-warning"></i>
-                                            <i class="bi bi-star-fill text-warning"></i>
-                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <app-star-rating [rating]="shampoo.productAvgRating"></app-star-rating>
                                             ({{ shampoo.productTotalRating }})
                                         </p>
                                     </div>
