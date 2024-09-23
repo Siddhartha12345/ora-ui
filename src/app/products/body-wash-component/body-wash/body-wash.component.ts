@@ -4,11 +4,12 @@ import { bodyWashMockList } from '../../../../assets/mock/body-wash-mock';
 import { Product } from '../../../model/product';
 import { ProductUtil } from '../../../util/product-util';
 import { StarRatingComponent } from '../../../common/star-rating/star-rating.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-body-wash',
   standalone: true,
-  imports: [CommonModule, StarRatingComponent],
+  imports: [CommonModule, StarRatingComponent, RouterModule],
   templateUrl: './body-wash.component.html',
   styleUrls: ['./body-wash.component.css', '../../products-styles.css']
 })

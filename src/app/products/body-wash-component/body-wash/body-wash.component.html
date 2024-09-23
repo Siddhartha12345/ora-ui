@@ -7,7 +7,9 @@
                     <div class="col-12 col-md-6 col-lg-4 d-flex flex-column" *ngFor="let bodyWash of bodyWashList">   
                         <div class="card border-0 rounded-0 shadow flex-fill card-container" style="width: 18rem;">
                             <div class="card-img-container">
-                                <img src="{{ bodyWash.productImage }}" class="card-img-top rounded-0" alt="...">
+                                <a [routerLink]="['/products/body-wash', bodyWash.productId]">
+                                    <img src="{{ bodyWash.productImage }}" class="card-img-top rounded-0" alt="...">
+                                </a>
                             </div>
                             <div class="card-body mt-3 mb-3">
                                 <div class="row">
