@@ -3,7 +3,7 @@ import { hairSerumMockList } from '../../../assets/mock/hair-serum-mock';
 import { Product } from '../../model/product';
 import { ProductUtil } from '../../util/product-util';
 import { CommonModule } from '@angular/common';
-import { StarRatingComponent } from '../star-rating/star-rating.component';
+import { StarRatingComponent } from '../../common/star-rating/star-rating.component';
 
 @Component({
   selector: 'app-hair-serums',
