@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MoisturizerComponent } from './moisturizer/moisturizer.component';
-import { ShampooComponent } from './shampoo/shampoo.component';
-import { HairSerumsComponent } from './hair-serums/hair-serums.component';
-import { BodyWashComponent } from './body-wash/body-wash.component';
+import { MoisturizerComponent } from './moisturizer-component/moisturizer/moisturizer.component';
+import { ShampooComponent } from './shampoo-component/shampoo/shampoo.component';
+import { HairSerumsComponent } from './hair-serum-component/hair-serums/hair-serums.component';
+import { BodyWashComponent } from './body-wash-component/body-wash/body-wash.component';
 
 const routes: Routes = [
   { path: 'shampoo', component: ShampooComponent },

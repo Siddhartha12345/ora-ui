@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
-import { hairSerumMockList } from '../../../assets/mock/hair-serum-mock';
-import { Product } from '../../model/product';
-import { ProductUtil } from '../../util/product-util';
+import { hairSerumMockList } from '../../../../assets/mock/hair-serum-mock';
+import { Product } from '../../../model/product';
+import { ProductUtil } from '../../../util/product-util';
 import { CommonModule } from '@angular/common';
-import { StarRatingComponent } from '../../common/star-rating/star-rating.component';
+import { StarRatingComponent } from '../../../common/star-rating/star-rating.component';
 
 @Component({
   selector: 'app-hair-serums',
   standalone: true,
   imports: [CommonModule, StarRatingComponent],
   templateUrl: './hair-serums.component.html',
-  styleUrls: ['./hair-serums.component.css', '../products-styles.css']
+  styleUrls: ['./hair-serums.component.css', '../../products-styles.css']
 })
 export class HairSerumsComponent {
 
