@@ -40,11 +40,12 @@
     border-left: 2px solid rgb(198, 196, 196);
 }
 
-i {
-    padding-right: 3px;
+::ng-deep app-star-rating i {
+    padding-right: 2px;
+    font-size: 20px;
 }
 
-p {
+.avg-rating {
     padding-top: 1px;
     padding-left: 3px;
     font-size: 20px;
@@ -81,4 +82,9 @@ p {
 
 .product-desc-card {
     border: none;
+}
+
+.desc {
+    padding-top: 1px;
+    font-size: 20px;
 }

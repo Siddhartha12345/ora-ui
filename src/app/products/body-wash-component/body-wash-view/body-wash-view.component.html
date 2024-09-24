@@ -3,32 +3,28 @@
         <i class="bi bi-heart-fill position-absolute fs-3 save-heart"></i>
         <div class="row g-0 card-row">
             <div class="col-md-5 img-div">
-                <img src="https://healthyhome.co.in/cdn/shop/products/1_a3e807bc-bd33-45cc-b963-6388b63b6e76_1024x1024.jpg" class="img-fluid rounded-start" alt="...">
+                <img src="{{ bodyWash.productImage }}" class="img-fluid rounded-start" alt="...">
             </div>
             <div class="col-md-7">
                 <div class="card-body">
-                    <h1 class="font-bold pt-3 mb-2.5 text-2xl">Red Onion Hair Shampoo, 300ml</h1>
-                    <h5 class="text-muted my-3">Strengthens Roots &amp; Improves Hair Texture</h5> <!---->
+                    <h1 class="font-bold pt-3 mb-2.5 text-2xl">{{ bodyWash.productName }}, {{ bodyWash.productQty }}ml</h1>
+                    <h5 class="text-muted my-3">{{ bodyWash.shortDescription }}</h5>
                     <div class="main-rating-div">
                         <div class="row no-gutters rating-card">
                             <!-- Left Side -->
                             <div class="col-6 d-flex card-left">
-                                <i class="bi bi-star-fill text-warning fs-5"></i>
-                                <i class="bi bi-star-fill text-warning fs-5"></i>
-                                <i class="bi bi-star-fill text-warning fs-5"></i>
-                                <i class="bi bi-star-fill text-warning fs-5"></i>
-                                <i class="bi bi-star-fill text-warning fs-5"></i>
-                                <p>(5)</p>
+                                <app-star-rating [rating]="bodyWash.productAvgRating"></app-star-rating>
+                                <p class="avg-rating">({{ bodyWash.productAvgRating }})</p>
                             </div>
                             <!-- Right Side -->
                             <div class="col-6 card-right">
-                                <p>105 Rating(s)</p>
+                                <p class="avg-rating">{{ bodyWash.productTotalRating }} Rating(s)</p>
                             </div>
                         </div>
                     </div>
                     <div class="price-div">
-                        <p class="new-price d-sm-inline">{{ 340 | currency: 'INR' }}</p>
-                        <del class="old-price d-sm-inline">{{ 340 | currency: 'INR' }}</del>
+                        <p class="new-price d-sm-inline">{{ bodyWash.productPrice| currency: 'INR' }}</p>
+                        <del class="old-price d-sm-inline">{{ bodyWash.productOldPrice | currency: 'INR' }}</del>
                     </div>
                     <p class="text-sm pt-2 pb-4">(MRP incl. of all taxes)</p>
                     <div class="cart-container">
@@ -46,9 +42,9 @@
     <div class="card mb-3 d-flex flex-column position-relative product-desc-card">
         <div class="row g-0 flex-fill">
             <h3>Product Description</h3>
-            <p>This is an appropriate and mild shampoo for hydrating, nourishing, balancing and volumizing your hair. Enriched with natural oils and herbs, it earnestly cleans the scalp and hair and leaves the locks soft, smooth and lustrous.</p>
+            <p class="desc">This is an appropriate and mild shampoo for hydrating, nourishing, balancing and volumizing your hair. Enriched with natural oils and herbs, it earnestly cleans the scalp and hair and leaves the locks soft, smooth and lustrous.</p>
             <h3>Key Benefits</h3>
-            <p>This shampoo contains 27 high-quality botanicals elements to combine shampooing with advanced hair care. Being gentle on 
+            <p class="desc">This shampoo contains 27 high-quality botanicals elements to combine shampooing with advanced hair care. Being gentle on 
                 the scalp and hair, the cleansing agents in the clarifying shampoo can effectively remove stubborn dirt, grease, and 
                 product residues, thereby leaving your scalp and hair perfectly clean. Natural oils infused in the shampoo helps restore
                 the scalps moisture barrier and hydrate it so that your hair does not feel dry after shampooing. It help mitigates the 
@@ -58,9 +54,9 @@
                 contain mineral oil and toxic chemicals such as paraben, phthalate, silicone, and sulfate. This is a cruelty-free product 
                 and has not been tested on animals. Oriental Botanics is part of PETAs Beauty without Bunnies program.</p>
             <h3>Manufacturer Details</h3>
-            <p>Vedic Cosmeceuticals Pvt. Ltd. B-31, Sector 85, Gautam Budh Nagar, Uttar Pradesh - 201 305, India. Mfg. Lic. No.: UP16320000029</p>
+            <p class="desc">Vedic Cosmeceuticals Pvt. Ltd. B-31, Sector 85, Gautam Budh Nagar, Uttar Pradesh - 201 305, India. Mfg. Lic. No.: UP16320000029</p>
             <h3>Country of Origin</h3>
-            <p>India</p>
+            <p class="desc">India</p>
             <a [routerLink]="['/products/body-wash']" class="btn btn-primary col-2 p-3 rounded-0">BACK</a>
         </div>
     </div>
