@@ -70,4 +70,15 @@ p {
 
 .save-heart {
     cursor: pointer;
+    top: 10px;
+    right: 10px;
+    color: red;
+}
+
+.product-desc-container {
+    margin-top: -10px
+}
+
+.product-desc-card {
+    border: none;
 }
