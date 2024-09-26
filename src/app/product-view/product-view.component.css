@@ -1,0 +1,90 @@
+.main-card {
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); 
+    border: 1px solid #ddd; 
+}
+
+.card-row {
+    height: 500px;
+}
+
+.img-div {
+    height: 100%; /* Fixed height */
+    overflow: hidden; /* Hide any overflowing image parts */
+    position: relative; /* Ensure positioning context for absolute child */
+}
+
+.img-div img {
+    width: 100%; /* Stretch image to fill container width */
+    height: 100%; /* Stretch image to fill container height */
+    object-fit: contain; /* Fit the entire image within the container */
+}
+
+.main-rating-div {
+    height: 50px;
+    width: 350px;
+}
+
+.rating-card {
+    width: 100%; /* Stretch image to fill container width */
+    height: 100%; /* Stretch image to fill container height */
+}
+
+.card-left {
+    padding-top: 5px;
+}
+
+.card-right {
+    padding-top: 5px;
+    border-left: 2px solid rgb(198, 196, 196);
+}
+
+::ng-deep app-star-rating i {
+    padding-right: 2px;
+    font-size: 20px;
+}
+
+.avg-rating {
+    padding-top: 1px;
+    padding-left: 3px;
+    font-size: 20px;
+}
+
+.price-div {
+    padding-top: 10px;
+}
+
+.new-price {
+    font-size: 30px;
+    padding-right: 10px;
+}
+
+.old-price {
+    font-size: 30px;
+    color: rgb(136, 130, 130);
+}
+
+.cart-container {
+    padding-bottom: 15px;
+}
+
+.save-heart {
+    cursor: pointer;
+    top: 10px;
+    right: 10px;
+    color: red;
+}
+
+.product-desc-container {
+    margin-top: -10px
+}
+
+.product-desc-card {
+    border: none;
+}
+
+.desc {
+    padding-top: 1px;
+    font-size: 20px;
+}

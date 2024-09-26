@@ -1,0 +1,63 @@
+<div class="container px-5 py-4">    
+    <div class="card mb-3 main-card position-relative">
+        <i class="bi bi-heart-fill position-absolute fs-3 save-heart"></i>
+        <div class="row g-0 card-row">
+            <div class="col-md-5 img-div">
+                <img src="{{ product.productImage }}" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-7">
+                <div class="card-body">
+                    <h1 class="font-bold pt-3 mb-2.5 text-2xl">{{ product.productName }}, {{ product.productQty }}ml</h1>
+                    <h5 class="text-muted my-3">{{ product.shortDescription }}</h5>
+                    <div class="main-rating-div">
+                        <div class="row no-gutters rating-card">
+                            <!-- Left Side -->
+                            <div class="col-6 d-flex card-left">
+                                <app-star-rating [rating]="product.productAvgRating"></app-star-rating>
+                                <p class="avg-rating">({{ product.productAvgRating }})</p>
+                            </div>
+                            <!-- Right Side -->
+                            <div class="col-6 card-right">
+                                <p class="avg-rating">{{ product.productTotalRating }} Rating(s)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-div">
+                        <p class="new-price d-sm-inline">{{ product.productPrice| currency: 'INR' }}</p>
+                        <del class="old-price d-sm-inline">{{ product.productOldPrice | currency: 'INR' }}</del>
+                    </div>
+                    <p class="text-sm pt-2 pb-4">(MRP incl. of all taxes)</p>
+                    <div class="cart-container">
+                        <a href="#" class="btn btn-dark text-warning w-100 p-3 rounded-5">ADD TO CART</a>
+                    </div>
+                    <div class="buynow-container">
+                        <a href="#" class="btn btn-warning text-white w-100 p-3 rounded-5">BUY NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container px-5 product-desc-container">
+    <div class="card mb-3 d-flex flex-column position-relative product-desc-card">
+        <div class="row g-0 flex-fill">
+            <h3>Product Description</h3>
+            <p class="desc">This is an appropriate and mild shampoo for hydrating, nourishing, balancing and volumizing your hair. Enriched with natural oils and herbs, it earnestly cleans the scalp and hair and leaves the locks soft, smooth and lustrous.</p>
+            <h3>Key Benefits</h3>
+            <p class="desc">This shampoo contains 27 high-quality botanicals elements to combine shampooing with advanced hair care. Being gentle on 
+                the scalp and hair, the cleansing agents in the clarifying shampoo can effectively remove stubborn dirt, grease, and 
+                product residues, thereby leaving your scalp and hair perfectly clean. Natural oils infused in the shampoo helps restore
+                the scalps moisture barrier and hydrate it so that your hair does not feel dry after shampooing. It help mitigates the 
+                irritated scalp and minimizes scalp flaking. Rich in bioactive components, it is beneficial for the hair follicles. The 
+                hair boosters help to strengthen the hair roots and minimize excessive hair fall. Natural plant proteins help to add 
+                volume and lustre to your hair. This shampoo is advocated for all hair types and suits both men and women. It does not 
+                contain mineral oil and toxic chemicals such as paraben, phthalate, silicone, and sulfate. This is a cruelty-free product 
+                and has not been tested on animals. Oriental Botanics is part of PETAs Beauty without Bunnies program.</p>
+            <h3>Manufacturer Details</h3>
+            <p class="desc">Vedic Cosmeceuticals Pvt. Ltd. B-31, Sector 85, Gautam Budh Nagar, Uttar Pradesh - 201 305, India. Mfg. Lic. No.: UP16320000029</p>
+            <h3>Country of Origin</h3>
+            <p class="desc">India</p>
+            <a [routerLink]="['/product', productType]" class="btn btn-primary col-2 p-3 rounded-0">BACK</a>
+        </div>
+    </div>
+</div>
