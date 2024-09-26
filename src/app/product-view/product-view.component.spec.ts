@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BodyWashViewComponent } from './body-wash-view.component';
+import { ProductViewComponent } from './product-view.component';
 
-describe('BodyWashViewComponent', () => {
-  let component: BodyWashViewComponent;
-  let fixture: ComponentFixture<BodyWashViewComponent>;
+describe('ProductViewComponent', () => {
+  let component: ProductViewComponent;
+  let fixture: ComponentFixture<ProductViewComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BodyWashViewComponent]
+      imports: [ProductViewComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(BodyWashViewComponent);
+    fixture = TestBed.createComponent(ProductViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

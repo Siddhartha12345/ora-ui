@@ -4,44 +4,44 @@
             <div class="container-fluid">
                 <div class="row gy-3 gy-md-4">
                     <!--Card start-->
-                    <div class="col-12 col-md-6 col-lg-4 d-flex flex-column" *ngFor="let bodyWash of bodyWashList">   
+                    <div class="col-12 col-md-6 col-lg-4 d-flex flex-column" *ngFor="let product of productList">   
                         <div class="card border-0 rounded-0 shadow flex-fill card-container" style="width: 18rem;">
                             <div class="card-img-container">
-                                <a [routerLink]="['/products/body-wash', bodyWash.productId]">
-                                    <img src="{{ bodyWash.productImage }}" class="card-img-top rounded-0" alt="...">
+                                <a [routerLink]="['/product', product.productType, product.productId]">
+                                    <img src="{{ product.productImage }}" class="card-img-top rounded-0" alt="...">
                                 </a>
                             </div>
                             <div class="card-body mt-3 mb-3">
                                 <div class="row">
                                     <div class="col-10">
-                                        <h4 class="card-title">{{ bodyWash.productName }}</h4>
+                                        <h4 class="card-title">{{ product.productName }}</h4>
                                         <p class="card-text">
-                                            <app-star-rating [rating]="bodyWash.productAvgRating"></app-star-rating>
-                                            ({{ bodyWash.productTotalRating }})
+                                            <app-star-rating [rating]="product.productAvgRating"></app-star-rating>
+                                            ({{ product.productTotalRating }})
                                         </p>
                                     </div>
                                     <div class="col-2">
-                                        <i [ngClass]="bodyWash.isBookmarked ? 'bi bi-bookmark-plus-fill fs-2' : 'bi bi-bookmark-plus fs-2'" 
-                                            (click)="toggleBookmark(bodyWash.productId)">
+                                        <i [ngClass]="product.isBookmarked ? 'bi bi-bookmark-plus-fill fs-2' : 'bi bi-bookmark-plus fs-2'" 
+                                            (click)="toggleBookmark(product.productId)">
                                         </i>
                                     </div>
                                 </div>
                             </div>
                             <div class="row align-items-center text-center g-0">
                                 <div class="col-4">
-                                    <h5>{{ bodyWash.productPrice | currency: 'INR' }}</h5>
+                                    <h5>{{ product.productPrice | currency: 'INR' }}</h5>
                                 </div>
                                 <div class="col-8">
-                                    <a (click)="addToCart(bodyWash.productId)" 
+                                    <a (click)="addToCart(product.productId)" 
                                         [ngClass]="{
                                             'btn': true,
                                             'w-100': true,
                                             'p-3': true,
                                             'rounded-0': true,
-                                            'btn-outline-dark': bodyWash.isAddedToCart,
-                                            'btn-dark text-warning': !bodyWash.isAddedToCart
+                                            'btn-outline-dark': product.isAddedToCart,
+                                            'btn-dark text-warning': !product.isAddedToCart
                                         }">
-                                        {{ bodyWash.isAddedToCart ? 'REMOVE' : 'ADD TO CART' }}
+                                        {{ product.isAddedToCart ? 'REMOVE' : 'ADD TO CART' }}
                                     </a>
                                 </div>
                             </div>
